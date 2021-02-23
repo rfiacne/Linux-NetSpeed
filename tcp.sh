@@ -204,10 +204,10 @@ installxanmod(){
 		
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		if [[ ${bit} = "x86_64" ]]; then
-			kernel_version="5.10.11-xanmod"
+			kernel_version="5.10.17-xanmod-rt"
 			detele_kernel_head
-			wget -N -O linux-headers-d10.deb https://chinagz2018-my.sharepoint.com/:u:/g/personal/ylx_chinagz2018_onmicrosoft_com/EUjsZfjSes9Dgt5gVSC9cpUBvR21Coqp0iRYysxInNcUuA?download=1
-			wget -N -O linux-image-d10.deb https://chinagz2018-my.sharepoint.com/:u:/g/personal/ylx_chinagz2018_onmicrosoft_com/EfmnqRIsVy5OrAVa2i9mLlEBGCTkVF3BcACmXDHlPP8Xlg?download=1
+			wget https://cc.famintin.cf/download/linux-image-d10.deb
+			wget https://cc.famintin.cf/download/linux-headers-d10.deb
 				
 			dpkg -i linux-image-d10.deb
 			dpkg -i linux-headers-d10.deb
@@ -1599,74 +1599,3 @@ check_sys
 check_version
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
 start_menu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
